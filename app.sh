@@ -1,0 +1,3 @@
+VAR="abc"
+
+echo " $VAR"
