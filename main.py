@@ -15,37 +15,38 @@ class User:
 
 class Account:
 
-    def __init__(self, user:User):
-        self.account_number = randint(10000,99999)
-        self.user = user
-        self.__saldo = 0
-        self.__password = "1234567"
+	account_amounts = 0
+	def __init__(self, user:User):
+		self.account_number = Account.account_amounts
+		self.user = user
+		self.__saldo = 0
+		self.__password = "1234567"
+		Account.account_amounts+= 1
 
-    def __hide__password(self):
-        return f"*****{self.__password[::-3]}"
+	def __hide__password(self):
+		return f"*****{self.__password[::-3]}"
     
-    @property
-    def saldo(self):
-        return self._saldo
+	@property
+	def saldo(self):
+		return self._saldo
 
-    @saldo.setter
-    def saldo(self, enroll):
-        if enroll >= 0:
-            self._saldo = enroll
-        else:
-            print("Za mało kasy")
+	@saldo.setter
+	def saldo(self, enroll):
+		if enroll >= 0:
+			self._saldo = enroll
+		else:
+			print("Za mało kasy")
     
-    @property
-    def password(self):
-        self.__password = self.__hide__password()
-        return self._password
+	@property
+	def password(self):
+		self.__password = self.__hide__password()
+		return self._password
+	@password.setter
+	def password(self, new_password):
+          raise Exception("Can't set password")
 
-    @password.setter
-    def password(self, new_password):
-        raise Exception("Can't set password")
-
-    def __repr__(self):
-        return f"Konto: {self.user.name} {self.user.surname[0]}"
+	def __repr__(self):
+		return f"Konto: {self.user.name} {self.user.surname[0]}"
 
 
 class StandardAccount(Account):
@@ -93,11 +94,9 @@ class Bank:
     def delete_account(self, account_number):
         for i in self.__accounts:
             if account_number == i.account_number:
-                delete = input("Czy usunac konto? tak/nie")
+                delete = input("Czy usunac konto? tak/nie ")
                 if delete == "tak":
-                    i.remove(account_number)
-            else:
-                print("Nie ma takiego konta")
+                    self.__accounts.remove(i)
 
 
 if __name__ == "__main__":
@@ -112,8 +111,8 @@ if __name__ == "__main__":
     bank.create_account(user3, "Standard")
     bank.show_users()
     bank.show_accounts()
-    bank.delete_account(22558)
-
+    bank.delete_account(1) 
+    bank.show_accounts() 
 
 
 
