@@ -1,0 +1,10 @@
+name: Workfkow
+
+on:
+	- wofklfow_dispatch
+jobs:
+	checks:
+		usues: ./.github/workflows/checks.yaml
+		with:
+
+	
