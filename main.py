@@ -91,12 +91,16 @@ class Bank:
         for i in self.__accounts:
             print(f"Type: {i.account_type} {i.account_number}")
     
-    def delete_account(self, account_number):
+    def delete_account(self):
+        account_number = int(input("Podaj numer konta do skasowania: "))
         for i in self.__accounts:
             if account_number == i.account_number:
-                delete = input("Czy usunac konto? tak/nie ")
+                delete = input("Czy usunac konto? tak/nie ") to 
                 if delete == "tak":
                     self.__accounts.remove(i)
+                    break
+        else:
+            print("Nie ma takiego konta")
 
 
 if __name__ == "__main__":
@@ -111,7 +115,7 @@ if __name__ == "__main__":
     bank.create_account(user3, "Standard")
     bank.show_users()
     bank.show_accounts()
-    bank.delete_account(1) 
+    bank.delete_account() 
     bank.show_accounts() 
 
 

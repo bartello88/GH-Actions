@@ -1,5 +1,11 @@
+from collections import namedtuple
+
+
 a=2
 print(a)
+
+Person = namedtuple('Person', 'name surname age')
+person = Person()
 
 
 class Dog:
@@ -14,7 +20,7 @@ class Singleton:
     _instance =None
 
     def __new__(cls):
-        if cla.is_instance is None:
+        if cls.is_instance is None:
             cls._instance = super().__new__(cls)
         return cls._instance
 
@@ -32,13 +38,7 @@ class House:
         self.taras=None
     
     def __str__(self):
-        return (f"""The House has the following
-                rooms :{self.rooms}
-                walls: {self.walls}
-                flors: {self.flors}
-                windows: {self.windows}
-                swiming pool: {self.swimming_pool}
-                garage: {self.garage}""")
+        return (f"The House has the following\nrooms :{self.rooms}\nwalls: {self.walls}\nflors: {self.flors}\nwindows: {self.windows}\nswiming pool: {self.swimming_pool}\ngarage: {self.garage}")
 
 class HouseBuilder:
     def __init__(self):
@@ -85,6 +85,6 @@ house2 = (HouseBuilder()
           .add_swimming_pool()
           .add_garage()
           .build())
-
+	
 print(house)
 print(house2) 
