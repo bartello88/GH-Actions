@@ -14,8 +14,10 @@ jobs:
         steps:
           - name: Get the code
             uses: actions/checkout@v4
-          - name: Run code
+          - name: Run tests
             run: |
               pip install pytest
               pytest 
+          - name: rUN THE CODE
+            run: 
               python app.py
