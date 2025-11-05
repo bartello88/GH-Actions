@@ -1,0 +1,16 @@
+on:
+  workflow_call:
+    inputs:
+      input_name:
+        requirde: True
+        type: string
+
+job:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Print input
+        run:
+          echo ${{ inputs.input_name }}
