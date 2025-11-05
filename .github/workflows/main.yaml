@@ -17,7 +17,7 @@ jobs:
           - name: Run tests
             run: |
               pip install pytest
-              pytest 
+              pytest -vv
           - name: Run the code
             run: 
               python app.py
