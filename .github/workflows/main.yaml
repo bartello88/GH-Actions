@@ -17,5 +17,5 @@ jobs:
           - name: Rrun code
             run: |
               pip install pytest
-              pytest ./tests/test.py
+              pytest 
               python app.py
