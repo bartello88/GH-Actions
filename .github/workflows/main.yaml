@@ -15,5 +15,6 @@ jobs:
           - name: Get the code
             uses: actions/checkout@v4
           - name: Rrun code
-            run:
+            run: |
+              pytest ./tests/test.py
               python app.py
