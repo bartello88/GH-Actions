@@ -23,6 +23,6 @@ jobs:
               python app.py
     checks:
         name: Checking
-        uses: ./.github/workflows/checks.yaml@main
+        uses: ./.github/workflows/checks.yaml
         with:
             input_name: Bartek
