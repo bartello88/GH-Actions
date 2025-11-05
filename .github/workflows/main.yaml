@@ -14,7 +14,7 @@ jobs:
         steps:
           - name: Get the code
             uses: actions/checkout@v4
-          - name: Rrun code
+          - name: Run code
             run: |
               pip install pytest
               pytest 
