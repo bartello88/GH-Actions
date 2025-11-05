@@ -8,6 +8,7 @@ Person = namedtuple('Person', 'name surname age')
 person = Person()
 
 
+
 class Dog:
     def __init__(self, name):
         self.name = name
