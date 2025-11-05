@@ -10,7 +10,7 @@ class Dog:
         self.name = name
         self.age = age
 
-dog = Dog("name")
+dog = Dog("name", 34)
 print(dog)
 
 
