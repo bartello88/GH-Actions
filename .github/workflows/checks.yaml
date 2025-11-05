@@ -2,7 +2,7 @@ on:
   workflow_call:
     inputs:
       input_name:
-        requirde: True
+        required: True
         type: string
 
 job:
@@ -14,3 +14,4 @@ job:
       - name: Print input
         run:
           echo ${{ inputs.input_name }}
+
