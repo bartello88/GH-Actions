@@ -21,3 +21,8 @@ jobs:
           - name: Run the code
             run: 
               python app.py
+    checks:
+        name: Checking
+        uses: ./checks.yaml
+            with:
+                input_name: Bartek
