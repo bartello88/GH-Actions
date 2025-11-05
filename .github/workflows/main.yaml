@@ -23,6 +23,6 @@ jobs:
               python app.py
     checks:
         name: Checking
-        uses: ./checks.yaml
+        uses: ./.githuh/workflows/checks.yaml
         with:
             input_name: Bartek
