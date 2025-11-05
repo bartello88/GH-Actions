@@ -4,10 +4,6 @@ from collections import namedtuple
 a=2
 print(a)
 
-Person = namedtuple('Person', 'name surname age')
-person = Person()
-
-
 
 class Dog:
     def __init__(self, name):
