@@ -2,7 +2,7 @@ import pytest
 from app import Dog
 
 def test_home():
-  dog = Dog("Reksio", age=None)
+  dog = Dog("Reksio", None)
   assert dog.name == "Reksio"
 
 def test_age():
