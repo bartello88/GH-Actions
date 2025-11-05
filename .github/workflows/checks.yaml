@@ -14,5 +14,6 @@ jobs:
       - name: Print input
         run:
           echo ${{ inputs.input_name }}
+          echo ${{ inputs.input_name }}
 
 
