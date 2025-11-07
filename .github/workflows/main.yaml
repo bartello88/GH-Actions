@@ -22,6 +22,8 @@ jobs:
             run: |
               echo "Test"
               echo "$GITHUB_REF"
+              echo "Commit ${{ github.sha }}"
+              echi ${{ github.repository}}
               echo ${{ github.ref }}
               echo "Test"
               python app.py
