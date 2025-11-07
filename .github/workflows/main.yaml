@@ -20,8 +20,10 @@ jobs:
               pytest -vv
           - name: Run the code
             run: 
+              echo "Test"
               echo "$GITHUB.REF"
               echo ${{ github.ref }}
+              echo "Test"
               python app.py
     checks:
         name: Checking
