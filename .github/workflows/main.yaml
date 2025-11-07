@@ -19,7 +19,7 @@ jobs:
               pip install pytest
               pytest -vv
           - name: Run the code
-            id: tests_app
+            id: test_app
             run: |
               echo "Test"
               echo "$GITHUB_REF"
