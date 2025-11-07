@@ -21,7 +21,7 @@ jobs:
           - name: Run the code
             run: |
               echo "Test"
-              echo "$GITHUB.REF"
+              echo "$GITHUB_REF"
               echo ${{ github.ref }}
               echo "Test"
               python app.py
