@@ -1,4 +1,4 @@
-name: First Actions
+name: First Actions - runs manually
 on: 
     workflow_dispatch:
 
