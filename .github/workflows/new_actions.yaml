@@ -4,6 +4,8 @@ on:
     push:
         paths:
             - "app.py"
+        paths-ignore: 
+            - "main.*"
 
 jobs:
     first-action:
