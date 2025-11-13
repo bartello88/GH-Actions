@@ -1,20 +1,20 @@
 name: First Actions
 on: 
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-      - dev
+    workflow_dispatch:
+    push:
+      branches:
+        - main
+        - dev
 
 jobs:
-  name: First Job
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Getting the code
-        uses: actions/checkout@v4
-      - name: Run the code
-        run: |
-          python app.py
+    name: First Job
+        runs-on: ubuntu-latest
+        steps:
+        - name: Getting the code
+          uses: actions/checkout@v4
+        - name: Run the code
+          run: |
+            python app.py
         
   
   
