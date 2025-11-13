@@ -9,12 +9,12 @@ on:
 jobs:
   name: First Job
     runs-on: ubuntu-latest
-      steps: 
-        - name: Getting the code
-          uses: actions/checkout@v4
-        - name: Run the code
-          run: |
-            python app.py
+    steps: 
+      - name: Getting the code
+        uses: actions/checkout@v4
+      - name: Run the code
+        run: |
+          python app.py
         
   
   
