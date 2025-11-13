@@ -27,7 +27,7 @@ jobs:
               echo ${{ github.repository}}
               echo ${{ github.ref }}
               echo "Test"
-              echo "Testing" >> @GITHUB_OUTPUT
+              echo "test=Testing" >> @GITHUB_OUTPUT
               python app.py
     checks:
         name: Checking
