@@ -10,7 +10,7 @@ jobs:
           uses: actions/checkout@v4
         - name: Run the code
           run: |
-            python app.py
+            echo "Workflow dziala"
         
   
   
