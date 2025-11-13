@@ -1,6 +1,9 @@
 name: First Actions - runs manually
 on: 
     workflow_dispatch:
+    push:
+        paths:
+            - "app.py"
 
 jobs:
     first-action:
