@@ -15,7 +15,8 @@ jobs:
         run:
           echo ${{ inputs.input_name }}
           echo ${{ inputs.input_name }}
-          echo ${{ steps.test_app.outputs.value }}
+          echo ${{ steps.test_app.outputs.test }}
+
 
 
 
