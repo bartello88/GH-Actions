@@ -1,10 +1,20 @@
 name: Get code and install depedencies
 description: Get a python code and install all required librariess
-
+inputs:
+  package_name: 
+    description: Ptyhons package name
+    required: true
+  app_name:
+    description: The app name
+    required: true
+    default: $GITHUB_REPOSITORY
+    
+    
 runs:
   using: 'composite'
   steps:
     - name: install depedencies
       run: |
-        pip install pytest
+        pip install ${{ inputs.package_name }}
+        echo "${{ inputs.app_name }}"
       shell: bash
