@@ -20,5 +20,5 @@ runs:
       run: |
         pip install ${{ inputs.package_name }}
         echo "${{ inputs.app_name }}"
-        echo "test=${{inputs.app_name}}+'asdasd'" >> $GITHUB_OUTPUT
+        echo "test=asdasd" >> $GITHUB_OUTPUT
       shell: bash
