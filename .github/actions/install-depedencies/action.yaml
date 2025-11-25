@@ -11,7 +11,7 @@ inputs:
 outputs:
   test_value:
     description: Output test
-    value: ${{steps.install.outputs.test}}
+    value: ${{ steps.install.outputs.test }}
     
 runs:
   using: 'composite'
