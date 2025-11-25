@@ -9,8 +9,9 @@ inputs:
     required: true
     default: $GITHUB_REPOSITORY
 outputs:
-  description: Output test
-  value: ${{steps.install.outputs.test}}
+  test_value:
+    description: Output test
+    value: ${{steps.install.outputs.test}}
     
 runs:
   using: 'composite'
