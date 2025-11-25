@@ -22,7 +22,7 @@ jobs:
           - name: Run the code
             id: test_app
             run: |
-              ech "Output test = ${{steps.install.outputs.test_value}}"
+              ech "Output test ${{steps.install.outputs.test_value}}"
               echo "Test"
               echo "$GITHUB_REF"
               echo "Commit ${{ github.sha }}"
