@@ -34,6 +34,7 @@ jobs:
           - name: Output vaule
             run: |
               echo "Output test ${{ steps.test_app.outputs.test_value }}"
+    checks:
         name: Checking
         uses: ./.github/workflows/checks.yaml
         with:
