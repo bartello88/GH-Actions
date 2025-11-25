@@ -14,6 +14,7 @@ jobs:
         steps:
           - name: Get the code
             uses: actions/checkout@v4
+            id: test_output
           - name: Install depedencies
             uses: ./.github/actions/install-depedencies
             with:
@@ -32,8 +33,8 @@ jobs:
               python app.py
           - name: Output vaule
             run: |
-              echo "${{ steps.install.outputs.test_value1 }}"
-              echo "${{ steps.install.outputs.test_value2 }}"
+              echo "${{ steps.test_output.outputs.test_value1 }}"
+              echo "${{ steps.test_output.outputs.test_value2 }}"
     checks:
         name: Checking
         uses: ./.github/workflows/checks.yaml
