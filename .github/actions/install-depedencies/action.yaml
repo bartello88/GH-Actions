@@ -22,4 +22,5 @@ runs:
         pip install ${{ inputs.package_name }}
         echo "${{ inputs.app_name }}"
         echo "test=123" >> $GITHUB_OUTPUT
+        echo "test=123" >> $GITHUB_OUTPUT
       shell: bash
