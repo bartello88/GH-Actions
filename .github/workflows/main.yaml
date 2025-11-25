@@ -31,6 +31,9 @@ jobs:
               echo "Test"
               echo "test=Testing" >> $GITHUB_OUTPUT
               python app.py
+          - name: Output vaule
+            run: |
+              echo "Output test ${{ steps.install.outputs.test_value }}"
     checks:
         name: Checking
         uses: ./.github/workflows/checks.yaml
