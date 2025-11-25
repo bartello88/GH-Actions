@@ -9,8 +9,10 @@ inputs:
     required: true
     default: $GITHUB_REPOSITORY
 outputs:
-  test_value1: ${{ steps.install.outputs.test1 }}
-  test_value2: ${{ steps.install.outputs.test2 }}
+  test_value1:
+    value: ${{ steps.install.outputs.test1 }}
+  test_value2:
+    value: ${{ steps.install.outputs.test2 }}
     
 runs:
   using: 'composite'
