@@ -13,11 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Get the code
-            uses: actions/checkout@v4
-          - name: Run tests
-            run: |
-              pip install pytest
-              pytest -vv
+            uses: ./.github/actions/install-depedencies
           - name: Run the code
             id: test_app
             run: |
