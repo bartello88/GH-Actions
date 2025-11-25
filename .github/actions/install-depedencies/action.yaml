@@ -1,1 +1,12 @@
+name: Get code and install depedencies
+description: Get a python code and install all required librariess
 
+runs:
+  using: 'composite'
+  steps:
+    - name: Get the code
+      uses: actions/checkout@v4
+    - name: install depedencies
+      run: |
+        pip install pytest
+      shell: bash
