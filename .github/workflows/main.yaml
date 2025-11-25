@@ -32,8 +32,8 @@ jobs:
               python app.py
           - name: Output vaule
             run: |
-              echo "${{ needs.test_app.outputs.test_value1 }}"
-              echo "${{ needs.test_app.outputs.test_value2 }}"
+              echo "${{ steps.install.outputs.test_value1 }}"
+              echo "${{ steps.install.outputs.test_value2 }}"
     checks:
         name: Checking
         uses: ./.github/workflows/checks.yaml
