@@ -14,8 +14,8 @@ jobs:
         steps:
           - name: Get the code
             uses: actions/checkout@v4
-            id: test_output
           - name: Install depedencies
+            id: test_output
             uses: ./.github/actions/install-depedencies
             with:
                 package_name: pytest
