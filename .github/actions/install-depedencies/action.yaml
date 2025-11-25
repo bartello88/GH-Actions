@@ -8,13 +8,17 @@ inputs:
     description: The app name
     required: true
     default: $GITHUB_REPOSITORY
-    
+outputs:
+  description: Output test
+  value: ${{steps.install.outputs.test}}
     
 runs:
   using: 'composite'
   steps:
     - name: install depedencies
+      id: install
       run: |
         pip install ${{ inputs.package_name }}
         echo "${{ inputs.app_name }}"
+        echo "test=${{inputs.app_name}}+'asdasd'" >> $GITHUB_OUTPUT
       shell: bash
