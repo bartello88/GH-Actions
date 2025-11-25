@@ -18,7 +18,7 @@ jobs:
             uses: ./.github/actions/install-depedencies
             with:
                 package_name: pytest
-                app_name: abc
+                # app_name: abc
           - name: Run the code
             id: test_app
             run: |
