@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output GitHub context
+        id: info
         run: |
           echo "$Branch: {{ github.ref }}"
           echo "Rep: ${{ github.repository }}"
@@ -16,5 +17,10 @@ jobs:
           echo "Event name: ${{ github.event_name }}"
           echo "Commit: ${{ github.sha }}"
           echo "OS ${{ github.os }}"
-          echo "${{ env.name }}"
-          echo "${{ env.age }}"
+          echo "${{ secrets.USER }}"
+          echo "${{ secrets.PASSWORD }}"
+          echo "${{ job.status }}"
+          echo "${{ job.container }}"
+          echo "${{ job.services }}"
+          echo "${{ steps.status }}"
+          echo "${{ env.info.conclusion }}"
