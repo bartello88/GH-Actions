@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: Output GitHub context
         run: |
-          echo "${{ github.ref }}"
-          echo "${{ github.repository }}"
-          echo "${{ github.actor }}"
-          echo "${{ github.event_name }}"
-          echo "${{ github.sha }}"
-          echo "${{ github.os }}"
+          echo "$Branch: {{ github.ref }}"
+          echo "Rep: ${{ github.repository }}"
+          echo "User: ${{ github.actor }}"
+          echo "Event name: ${{ github.event_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "OS${{ github.os }}"
