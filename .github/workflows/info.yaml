@@ -7,10 +7,16 @@ jobs:
       name: 'Bartek'
       age: 25
     runs-on: ubuntu-latest
+    name: Info job
+    outputs:
+      var1: ${{ steps.info.outputs.var1 }}
+      var2: ${{ steps.info.outputs.var2 }}
     steps:
       - name: Output GitHub context
         id: info
         run: |
+          echo "var1=111111"
+          echo "var2=222222"
           echo "$Branch: {{ github.ref }}"
           echo "Rep: ${{ github.repository }}"
           echo "User: ${{ github.actor }}"
@@ -20,7 +26,9 @@ jobs:
           echo "${{ secrets.USER }}"
           echo "${{ secrets.PASSWORD }}"
           echo "${{ job.status }}"
-          echo "${{ job.container }}"
+          echo "${{ jobs.info.result }}"
           echo "${{ job.services }}"
           echo "${{ steps.status }}"
           echo "${{ steps.info.conclusion }}"
+          echo "${{ steps.info.outputs.var1 }}"
+          echo "${{ steps.info.outputs.var2 }}"
