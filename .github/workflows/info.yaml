@@ -26,7 +26,6 @@ jobs:
           echo "${{ secrets.USER }}"
           echo "${{ secrets.PASSWORD }}"
           echo "${{ job.status }}"
-          echo "${{ jobs.info.result }}"
           echo "${{ job.services }}"
           echo "${{ steps.status }}"
           echo "${{ steps.info.conclusion }}"
