@@ -23,4 +23,4 @@ jobs:
           echo "${{ job.container }}"
           echo "${{ job.services }}"
           echo "${{ steps.status }}"
-          echo "${{ env.info.conclusion }}"
+          echo "${{ steps.info.conclusion }}"
