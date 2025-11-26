@@ -15,8 +15,8 @@ jobs:
       - name: Output GitHub context
         id: info
         run: |
-          echo "var1=111111"
-          echo "var2=222222"
+          echo "var1=111111" >> GITHUB_OUTPUT
+          echo "var2=222222" >> GITHUB_OUTPUT
           echo "$Branch: {{ github.ref }}"
           echo "Rep: ${{ github.repository }}"
           echo "User: ${{ github.actor }}"
