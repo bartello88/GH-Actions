@@ -31,3 +31,8 @@ jobs:
           echo "${{ steps.info.conclusion }}"
           echo "${{ steps.info.outputs.out1 }}"
           echo "${{ steps.info.outputs.out2 }}"
+      - name: Output info
+        id: output
+        run: |
+          echo "${{ steps.info.outputs.out1 }}"
+          echo "${{ steps.info.outputs.out2 }}"
