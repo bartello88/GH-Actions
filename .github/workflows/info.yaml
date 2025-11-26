@@ -12,4 +12,4 @@ jobs:
           echo "User: ${{ github.actor }}"
           echo "Event name: ${{ github.event_name }}"
           echo "Commit: ${{ github.sha }}"
-          echo "OS${{ github.os }}"
+          echo "OS ${{ github.os }}"
