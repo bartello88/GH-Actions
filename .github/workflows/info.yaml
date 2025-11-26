@@ -3,6 +3,9 @@ on: workflow_dispatch
 
 jobs:
   info:
+    env:
+      name: 'Bartek'
+      age: 25
     runs-on: ubuntu-latest
     steps:
       - name: Output GitHub context
@@ -13,3 +16,5 @@ jobs:
           echo "Event name: ${{ github.event_name }}"
           echo "Commit: ${{ github.sha }}"
           echo "OS ${{ github.os }}"
+          echo "${{ env.name }}"
+          echo "${{ env.age }}"
