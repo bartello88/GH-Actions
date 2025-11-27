@@ -36,3 +36,4 @@ jobs:
         run: |
           echo "${{ steps.info.outputs.out1 }}"
           echo "${{ steps.info.outputs.out2 }}"
+          echo "${{ toJSON(github) }}"
