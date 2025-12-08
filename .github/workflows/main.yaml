@@ -35,7 +35,7 @@ jobs:
             env:
                 MY_ENV: ${{
                   (github.ref == 'refs/heads/main'     && 'MAIN')    ||
-                  (github.ref == 'refs/heads/develop'  && 'DEV')     ||
+                  (github.ref == 'refs/heads/dev'      && 'DEV')     ||
                   (github.ref == 'refs/heads/release'  && 'RELEASE') ||
                   'INNY'}}
             
