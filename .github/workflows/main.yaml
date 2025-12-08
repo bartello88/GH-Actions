@@ -33,7 +33,11 @@ jobs:
               python app.py
           - name: Output vaule
             env:
-                MY_ENV: ${{ github.ref == 'refs/heads/main' && 'TAK' || 'NIE' }}
+                MY_ENV: ${{
+                  (github.ref == 'refs/heads/main'     && 'MAIN')    ||
+                  (github.ref == 'refs/heads/develop'  && 'DEV')     ||
+                  (github.ref == 'refs/heads/release'  && 'RELEASE') ||
+                  'INNY'}}
             
             run: |
               echo "${{ steps.test_output.outputs.test_value1 }}"
