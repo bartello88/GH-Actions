@@ -32,9 +32,14 @@ jobs:
               echo "test=Testing" >> $GITHUB_OUTPUT
               python app.py
           - name: Output vaule
+            env:
+                MY_ENV: ${{ github.ref == 'refs/heads/main' && 'TAK' || 'NIE' }}
+            
             run: |
               echo "${{ steps.test_output.outputs.test_value1 }}"
               echo "${{ steps.test_output.outputs.test_value2 }}"
+              echo "$MY_ENV"
+              
     checks:
         name: Checking
         uses: ./.github/workflows/checks.yaml
